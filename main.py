@@ -17,17 +17,17 @@ def sort_files():
             extension = os.path.splitext(filename)[1].lower()
             category = 'Прочее'
 
-            if extension in ['.jpg', '.png', '.gif']:
+            if extension in ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.ico']:
                 category = 'Изображения'
-            elif extension in ['.doc', '.pdf', '.txt']:
+            elif extension in ['.doc', '.docx', '.pdf', '.txt', '.rtf', '.odt', '.ppt', '.pptx', '.xls', '.xlsx']:
                 category = 'Документы'
-            elif extension in ['.mp4', '.avi', '.mkv']:
+            elif extension in ['.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv', '.mpeg', '.mpg', '.webm']:
                 category = 'Видео'
-            elif extension in ['.mp3', '.wav', '.flac']:
+            elif extension in ['.mp3', '.wav', '.flac', '.aac', '.ogg', '.wma', '.m4a']:
                 category = 'Аудио'
-            elif extension in ['.zip', '.rar', '.7z']:
+            elif extension in ['.zip', '.rar', '.7z', '.tar', '.gz', '.bz2', '.xz']:
                 category = 'Архивы'
-            elif extension in ['.exe', '.msi']:
+            elif extension in ['.exe', '.msi', '.dmg', '.pkg']:
                 category = 'Установщики'
 
             if category != 'Прочее':
@@ -49,13 +49,13 @@ root.title("Сортировка файлов")
 root.geometry("400x200")  # Указываем размер окна
 
 category_folders = {
-    'Изображения': r'E:\Сортированные файлы\Изображения',
-    'Документы': r'E:\Сортированные файлы\Документы',
-    'Видео': r'E:\Сортированные файлы\Видео',
-    'Аудио': r'E:\Сортированные файлы\Аудио',
-    'Архивы': r'E:\Сортированные файлы\Архивы',
-    'Установщики': r'E:\Сортированные файлы\Установщики',
-    'Прочее': r'E:\Сортированные файлы\Прочее'
+    'Изображения': r'D:\Сортированные файлы\Изображения',
+    'Документы': r'D:\Сортированные файлы\Документы',
+    'Видео': r'D:\Сортированные файлы\Видео',
+    'Аудио': r'D:\Сортированные файлы\Аудио',
+    'Архивы': r'D:\Сортированные файлы\Архивы',
+    'Установщики': r'D:\Сортированные файлы\Установщики',
+    'Прочее': r'D:\Сортированные файлы\Прочее'
 }
 
 selected_folder = tk.StringVar()
